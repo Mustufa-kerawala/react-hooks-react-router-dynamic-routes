@@ -7,7 +7,7 @@ function MoviesPage({ movies }) {
 
   const match = useRouteMatch();
 
-
+  console.log(match);
 
 
   return (
@@ -15,7 +15,7 @@ function MoviesPage({ movies }) {
       <MoviesList movies={movies} />
 
       <Route path={`${match.url}/:movieId`}>
-        <MovieShow />
+        <MovieShow movies={movies}/>
 
       </Route>
     </div>
